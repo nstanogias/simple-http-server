@@ -1,0 +1,11 @@
+INTERNAL*
+lib
+bin
+target
+.project
+.classpath
+.settings
+.svn
+Additional*
+lisa*
+*.sh
