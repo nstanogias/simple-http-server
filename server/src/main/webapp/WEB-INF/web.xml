@@ -5,16 +5,22 @@
     <display-name>Hitta Recruitment</display-name>
 
     <servlet>
-        <servlet-name>hello-world</servlet-name>
-        <servlet-class>se.hitta.recruitment.server.HelloWorld</servlet-class>
+        <servlet-name>jersey-serlvet</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
         <init-param>
-            <param-name>load-on-startup</param-name>
-            <param-value>1</param-value>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>se.hitta.recruitment.controller</param-value>
         </init-param>
+        <init-param>
+            <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+            <param-value>true</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>hello-world</servlet-name>
+        <servlet-name>jersey-serlvet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>
